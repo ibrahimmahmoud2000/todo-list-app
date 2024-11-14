@@ -1,0 +1,73 @@
+/* Light mode settings as default */
+:root {
+  --bg-color: #f2f2f2;
+  --text-color: #333;
+  --primary-color: #007aff;
+  --secondary-color: #005bb5;
+  --container-bg-color: white;
+}
+
+/* Dark mode settings */
+[data-theme="dark"] {
+  --bg-color: #121212;
+  --text-color: #f2f2f2;
+  --primary-color: #bb86fc;
+  --secondary-color: #3700b3;
+  --container-bg-color: #1e1e1e;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.container {
+  background-color: var(--container-bg-color);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, p {
+  color: var(--text-color);
+}
+
+#addTask {
+  background: var(--primary-color);
+  border: none;
+  color: white;
+  transition: background 0.3s ease;
+}
+#addTask:hover {
+  background: var(--secondary-color);
+}
+
+.list-group-item {
+  background-color: var(--container-bg-color);
+  border: 1px solid #ddd;
+  color: var(--text-color);
+}
+
+.modal-header {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.task-actions i {
+  color: var(--primary-color);
+}
+.task-actions i:hover {
+  color: var(--secondary-color);
+}
+.done {
+  text-decoration: line-through;
+  color: #888;
+}
+.done .task-actions i {
+  color: #888;
+}
+@media (max-width: 575.98px) {
+  html {
+    font-size: 12px;
+  }
+}
